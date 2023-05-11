@@ -1,0 +1,33 @@
+CompileFlags: 
+  Add: [-Wno-deprecated,]
+Diagnostics:
+  ClangTidy:
+    Add: [
+      # 'boost-*',
+      'bugprone-*',
+      # 'cert-*',
+      'clang-analyzer-*',
+      # 'concurrency-*',
+      'cppcoreguidelines-*',
+      'google-explicit-constructor',
+      # 'misc-*',
+      'modernize-*',
+      'performance-*',
+      'portability-*',
+      'readability-*',
+    ]
+    Remove: [
+      'bugprone-easily-swappable-parameters',
+      'modernize-use-trailing-return-type',
+      'readability-redundant-access-specifiers',
+      'readability-identifier-length',
+      'readability-magic-numbers',
+      'cppcoreguidelines-avoid-magic-numbers',
+    ]
+  UnusedIncludes: Strict
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+Hover:
+  ShowAKA: Yes
